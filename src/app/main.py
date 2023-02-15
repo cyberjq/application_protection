@@ -2,12 +2,12 @@ import sys
 
 from PyQt6 import QtWidgets
 
-from src.app.gui.gui import Ui_MainWindow
+from src.app.gui import UiMainWindow
 
 
 def start():
     app = QtWidgets.QApplication(sys.argv)
-    window = Ui_MainWindow()
+    window = UiMainWindow()
     window.show()
     app.exec()
 

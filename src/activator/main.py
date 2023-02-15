@@ -4,14 +4,14 @@ from PyQt6 import QtWidgets
 
 import dotenv
 
-from src.activator.gui.gui import Ui_MainWindow
+from src.activator.gui import UiMainWindow
 
 dotenv.load_dotenv()
 
 
 def start():
     app = QtWidgets.QApplication(sys.argv)
-    window = Ui_MainWindow()
+    window = UiMainWindow()
     window.show()
     app.exec()
 

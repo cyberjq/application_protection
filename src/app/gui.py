@@ -6,13 +6,13 @@ from src.app.license_checker import LicenseChecker
 from src.app.validator import IntValidator
 
 
-class Ui_MainWindow(QMainWindow):
+class UiMainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        self.setup_ui(self)
 
-    def setupUi(self, MainWindow):
+    def setup_ui(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 450)
         MainWindow.setMinimumSize(QtCore.QSize(800, 450))
@@ -103,7 +103,7 @@ class Ui_MainWindow(QMainWindow):
         self.widgects.addWidget(self.blockCentralWidget)
 
         MainWindow.setCentralWidget(self.widgects)
-        self.retranslateUi(MainWindow)
+        self.retranslate_ui(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.checkButton.clicked.connect(self.is_prime)
@@ -116,7 +116,7 @@ class Ui_MainWindow(QMainWindow):
     def start(self):
         self.license_checker.start()
 
-    def retranslateUi(self, MainWindow):
+    def retranslate_ui(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Простые числа"))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "Введите число чтобы проверить на простоту от 2"))

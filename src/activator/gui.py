@@ -4,13 +4,13 @@ from src.protection import protection
 from src.activator.license_checker import LicenseChecker
 
 
-class Ui_MainWindow(QMainWindow):
+class UiMainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        self.setup_ui(self)
 
-    def setupUi(self, MainWindow):
+    def setup_ui(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(350, 200)
         MainWindow.setMinimumSize(QtCore.QSize(350, 200))
@@ -40,7 +40,7 @@ class Ui_MainWindow(QMainWindow):
         self.horizontalLayout.addItem(spacerItem1)
         MainWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
+        self.retranslate_ui(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.activateButton.clicked.connect(self.activate)
@@ -51,7 +51,7 @@ class Ui_MainWindow(QMainWindow):
     def start(self):
         self.license_checker.start()
 
-    def retranslateUi(self, MainWindow):
+    def retranslate_ui(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Активатор"))
         self.activateButton.setText(_translate("MainWindow", "Активировать"))
